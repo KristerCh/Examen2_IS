@@ -1,0 +1,27 @@
+<h2>Crear Ciudadano</h2>
+<form>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Nombre del Ciudadano</span>
+        </div>
+       <input name="nombre" type="text" class="form-control" id=primernombreCiudadano placeholder="Primer Nombre" [(ngModel)]="ciudadano.PrimerNombre">
+       <input name="nombre2" type="text" class="form-control" id=segundonombreCiudadano placeholder="Segundo Nombre" [(ngModel)]="ciudadano.SegundoNombre">
+    </div>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Apellidos del Ciudadano</span>
+        </div>
+       <input name="Apellido" type="text" class="form-control" id=primerApellidoCiudadano placeholder="Primer Apellido" [(ngModel)]="ciudadano.PrimerApellido">
+       <input name="Apellido2" type="text" class="form-control" id=segundoApellidoCiudadano placeholder="Segundo Apellido" [(ngModel)]="ciudadano.SegundoApellido">
+    </div>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Ciudad Natal</span>
+            <select class="form-control" name="nombreCiudad" id="categoriaControlSelect" [(ngModel)]="ciudadano.idCiudad">
+                <option *ngFor="let ciudad of ciudades" [value]="ciudad.idCiudad">{{ ciudad.nombreCiudad }}</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="crearCiudadano()">Guardar</button>&nbsp;
+    <button type="submit" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+</form>

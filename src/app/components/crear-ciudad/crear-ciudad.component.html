@@ -1,0 +1,18 @@
+
+<h2>Crear Ciudad</h2>
+<form>
+    <div class="form-group input-group d-inline-flex">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Nombre de Ciudad</span>
+        </div>
+       <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre de Ciudad" [(ngModel)]="ciudad.nombreCiudad">
+    </div>
+    <div class="form-group input-group d-inline-flex">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Descripcion de Ciudad</span>
+        </div>
+       <input name="Descripcion" type="text" class="form-control" id="Descripcion" placeholder="Ingresar Descripcion de Ciudad" [(ngModel)]="ciudad.Descripcion">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="crearCiudad()">Guardar</button>&nbsp;
+    <button type="submit" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+</form>
